@@ -5,7 +5,7 @@ A new Flutter project.
 ## Getting Started  
   
 Este proyecto contienen un demo para realizar pruebas unitarias y de integracion en flutter.
-El proyecto es un contador que cuenta con los botones de: Incrementar, disminuir y resetear al contador gestionado mediante flutter_bloc como manejador de estado.
+El proyecto es un contador que cuenta con los botones de: Incrementar, disminuir y resetear el contador, gestionado mediante flutter_bloc como manejador de estado.
   
 ### Documentacion Oficial
 
