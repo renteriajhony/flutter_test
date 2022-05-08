@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-
 import 'package:test_application1/main.dart' as app;
 
 void main() {
@@ -18,28 +17,28 @@ void main() {
 
           expect(find.text('1'), findsOneWidget);
 
-          final Finder fabIncrement = find.byKey(Key('incre'));
+          final Finder fabIncrement = find.byKey(const Key('incre'));
           final Finder fabLess      = find.byTooltip('Less');
-          final Finder fabRestart   = find.byTooltip('Restart');
+          final Finder fabRestart   = find.byKey(const Key('GlobalKey#57f77'));
 
 
           await tester.tap(fabIncrement);
-          await tester.pump(Duration(seconds: SECONT));
+          await tester.pump(const Duration(seconds: SECONT));
           await tester.tap(fabIncrement);
-          await tester.pump(Duration(seconds: SECONT));
+          await tester.pump(const Duration(seconds: SECONT));
           await tester.tap(fabIncrement);
-          await tester.pump(Duration(seconds: SECONT));
-          await tester.pumpAndSettle(Duration(seconds: SECONT));
+          await tester.pump(const Duration(seconds: SECONT));
+          await tester.pumpAndSettle(const Duration(seconds: SECONT));
           expect(find.text('4'), findsOneWidget);
 
           await tester.tap(fabLess);
-          await tester.pump(Duration(seconds: SECONT));
+          await tester.pump(const Duration(seconds: SECONT));
           await tester.tap(fabLess);
-          await tester.pump(Duration(seconds: SECONT));
+          await tester.pump(const Duration(seconds: SECONT));
           expect(find.text('2'), findsOneWidget);
 
           await tester.tap(fabRestart);
-          await tester.pump(Duration(seconds: SECONT));
+          await tester.pump(const Duration(seconds: SECONT));
           expect(find.text('0'), findsOneWidget);
 
         });

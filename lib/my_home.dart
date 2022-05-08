@@ -33,7 +33,7 @@ class MyHomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(3.0),
             child: FloatingActionButton(
-              key: Key('incre'),
+              key: const Key('incre'),
               onPressed: () => counterBloc.add(EventAdd()),
               tooltip: 'Increment',
               child: const Icon(Icons.add),
